@@ -71,7 +71,7 @@ syn match stanDistributed /\~/
 " syn keyword stanType data model  array category character complex real function integer list logical matrix numeric vector data.frame 
 " syn keyword stanType var 
 
-syn keyword stanType  int real cov_matrix corr_matrix vector matrix simplex
+syn keyword stanType  int real cov_matrix corr_matrix vector matrix simplex ordered
 syn keyword stanBlk functions data model parameters transformed generated quantities 
 " syn keyword stanBlk derived
 syn match equalSign /=/
@@ -103,7 +103,7 @@ syn match stanDistributionsII  /beta\(\s*(\)\@=/
 
 syn keyword stanFunctions exp sum log pow mean abs inv_logit  determinant  fabs pi 
 syn keyword stanFunctions col row sd 
-syn keyword stanFunctions int_step inv_cloglog inverse lbeta lgamma lmgamma log log10 log1m log1m_inv_logit log1p logp1p_exp log2 log_determinant log_inv_logit log_sum_exp logit max mdivide_left_tri_low midivide_right_tri_low mean min multiply_Log multiply_lower_tri_self_transpose negative_epsilon negative_infinity not_a_number pi positive_infinity pow prod round row rows sd sin singuar_values sinh size softmax sqrt sqrt2 square step sum tan tanh
+syn keyword stanFunctions int_step inv_cloglog inverse lbeta lgamma lmgamma log log10 log1m log1m_inv_logit log1p logp1p_exp log2 log_determinant log_inv_logit log_sum_exp logit max mdivide_left_tri_low midivide_right_tri_low mean min multiply_Log multiply_lower_tri_self_transpose negative_epsilon negative_infinity not_a_number pi positive_infinity pow prod round row rows sd sin singuar_values sinh size softmax sqrt sqrt2 square step sum tan tanh rep_vector
 syn keyword stanFunctions binary_log_loss binomial_coefficient_log  atan2 atan asin asinh atanh block cbrt ceil cholesy_decompose col cols cos cosh crossprod cumulative_sum diag_matrix diag_post_multiply diag_pre_multiply diagnoal dims dot_product dot_self e eigenvalues_sym eigenvectors_sym epsilon erf erfc exp exp2 expm1 fdim floor fma fmax fmin fmod hypot if_else 
 syn keyword stanFunctions bernoulli_cdf beta_binomial_cdf beta_cdf binomial_cdf exponential_cdf inv_chi_square_cdf inv_gamma_cdf logistic_cdf lognormal_cdf neg_binomial_cdf normal_cdf pareto_cdf poisson_cdf scaled_inv_chi_square_cdf student_t_cdf
 syn keyword stanFunctions bernoulli_ccdf beta_binomial_ccdf beta_ccdf binomial_ccdf exponential_ccdf inv_chi_square_ccdf inv_gamma_ccdf logistic_ccdf lognormal_ccdf neg_binomial_ccdf normal_ccdf pareto_ccdf poisson_ccdf scaled_inv_chi_square_ccdf student_t_ccdf rows_dot_self rows_dot_product 
@@ -117,7 +117,7 @@ syn keyword stanFunctions eigenvectors_sym eigenvectors_sym inverse_spd inv_sqrt
 " defined as step(y) = y < 0 ? 0 : 1
 syn keyword stanFunctions step append_row append_col 
 " normal CDF 
-syn keyword stanFunctions Phi  Phi_approx 
+syn keyword stanFunctions Phi  Phi_approx  normal_lpdf
 
 " Special
 syn match stanDelimiter /[,;:><]/
