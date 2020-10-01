@@ -58,6 +58,7 @@ syn match stanIdentifier /\.\d*\K\k*/
 " syn keyword stanStatement   break next return
 syn keyword stanConditional if else
 syn keyword stanRepeat      for in while
+syn keyword stanReturn      return
 
 " Constant
 " syn keyword stanConstant LETTERS letters month.ab month.name pi
@@ -173,6 +174,7 @@ if version >= 508 || !exists("did_r_syn_inits")
   HiLink stanStatement   Statement
   HiLink stanConditional Conditional
   HiLink stanRepeat      Repeat
+  HiLink stanReturn      Repeat
   HiLink stanIdentifier  Normal
   HiLink stanArrow	 Statement	
   HiLink stanDistributed Statement 
